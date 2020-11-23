@@ -5,8 +5,10 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 
-  {"Volume: ", WIDGET_PATH "volume", 0, 1},
-	{"", "date '+%a %d %b %Y %H:%M'",					60,		0},
+  {"Volume: ", WIDGET_PATH "volume",          0,    1},
+  {"",         WIDGET_PATH "battery",         10,   0},
+  {"",         WIDGET_PATH "internet",        10,   0},
+	{"",         "date '+%a %d %b %Y %H:%M'",		60,		0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
