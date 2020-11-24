@@ -1,0 +1,5 @@
+if amixer sget Master | grep -E 'Front Left:.*\[off\]' >/dev/null; then
+  echo "M"
+else
+  amixer sget Master | awk -F"[][]" '/Front Left:/ {print $2}'
+fi

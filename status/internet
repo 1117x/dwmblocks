@@ -1,0 +1,15 @@
+
+
+for device in /sys/class/net/*; do
+  if [ "$(cat ${device}/operstate)" = "up" ]; then
+    if [ -d "/sys/class/net/${device}/wireless" ]; then
+      percent=$(awk '/^\s*wlo/ { print int($3 * 100 / 70) }' /proc/net/wireless)
+      name=$(iwgetid -r)
+      echo $name ${percent}%
+    # else show nothing if ethernet connected
+    fi
+    exit
+  fi
+done
+
+echo "No Connection"
