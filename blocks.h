@@ -11,6 +11,7 @@ static const Block blocks[] = {
   {"",         WIDGET_PATH "memory",          5,    0},
   {"",         WIDGET_PATH "cpu",             5,    0},
   {"",         WIDGET_PATH "internet",        10,   0},
+  {"",         WIDGET_PATH "ip",              60,   0},
 	{"",         "date '+%a %d %b %Y %H:%M'",		60,		0},
 };
 
