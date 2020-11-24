@@ -7,7 +7,7 @@ static const Block blocks[] = {
 
   {"Volume: ", WIDGET_PATH "volume",          0,    1},
   {"",         WIDGET_PATH "battery",         10,   0},
-  {"",         WIDGET_PATH "bandwidth",       1,    0},
+  /* {"",         WIDGET_PATH "bandwidth",       1,    0}, */
   {"",         WIDGET_PATH "memory",          5,    0},
   {"",         WIDGET_PATH "cpu",             5,    0},
   {"",         WIDGET_PATH "internet",        10,   0},
