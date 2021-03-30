@@ -1,5 +1,6 @@
 if amixer sget Master | grep -E 'Front Left:.*\[off\]' >/dev/null; then
-  echo "M"
+  echo "婢"
 else
+  echo -n "墳 "
   amixer sget Master | awk -F"[][]" '/Front Left:/ {print $2}'
 fi

@@ -1,7 +1,13 @@
 if [ -d "/sys/class/power_supply/BAT1" ]; then
   capacity=$(cat /sys/class/power_supply/BAT1/capacity)
   status=$(cat /sys/class/power_supply/BAT1/status)
-  echo -n $status
-  [ "$status" = "Full" ] || echo ": ${capacity}%"
-# else show nothing if no battery
+
+  case "$status" in
+    "Full") echo "" ;;
+		"Discharging") echo "" $capacity ;;
+		"Charging") echo "" $capacity ;;
+  esac
+
+else
+  echo ""
 fi
