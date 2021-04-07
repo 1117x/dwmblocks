@@ -5,16 +5,17 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 
-  {" ",         WIDGET_PATH "volume",          60,   1},
+  {" ",         WIDGET_PATH "volume",          60,   1},
   {"",         WIDGET_PATH "battery",         10,   0},
   /* {"",         WIDGET_PATH "bandwidth",       1,    0}, */
   /* {"",         WIDGET_PATH "memory",          5,    0}, */
   /* {"",         WIDGET_PATH "cpu",             5,    0}, */
   {"",         WIDGET_PATH "internet",        10,   0},
-  {"泌 ",         WIDGET_PATH "ip",              60,   0},
-	 {"  ",       "date '+%a %d. %B %Y %H:%M'",		60,		0}
+  /* {"泌 ",         WIDGET_PATH "ip",              60,   0}, */
+	 {"  ",       "date '+%a. %d. %B %Y'",		60,		0},
+	 {" ",       "date '+%H:%M'",       		60,		0}
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char delim[] = "  ";
+static char delim[] = "  ";
 static unsigned int delimLen = 5;
