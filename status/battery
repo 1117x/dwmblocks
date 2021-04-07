@@ -4,8 +4,8 @@ if [ -d "/sys/class/power_supply/BAT1" ]; then
 
   case "$status" in
     "Full") echo "" ;;
-		"Discharging") echo "" $capacity ;;
-		"Charging") echo "" $capacity ;;
+		"Discharging") echo " " $capacity% ;;
+		"Charging") echo " " $capacity% ;;
   esac
 
 else

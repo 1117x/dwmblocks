@@ -3,7 +3,7 @@ for device in /sys/class/net/*; do
     if [ -d "${device}/wireless" ]; then
       percent=$(awk '/^\s*wlo/ { print int($3 * 100 / 70) }' /proc/net/wireless 2>/dev/null)
       name=$(iwgetid -r 2>/dev/null)
-      echo "" $name ${percent}%
+      echo " " $name ${percent}%
     else
       echo ""
     fi
