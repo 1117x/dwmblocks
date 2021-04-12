@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if res=$(cmus-remote -Q); then
+  status=$(echo "$res" | awk '/^status/{print $2}')
+  case "$status" in 
+    playing)
+      echo " ";;
+    paused)
+      echo " ";;
+    stopped)
+      echo " ";;
+  esac
+else
+  echo " "
+fi
