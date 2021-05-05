@@ -1,6 +1,9 @@
-if amixer sget Master | grep -E 'Front Left:.*\[off\]' >/dev/null; then
-  echo "婢"
+if amixer sget Capture | grep -E '\[off\]' >/dev/null; then
+  echo -n " "
+fi
+if amixer sget Master | grep -E '\[off\]' >/dev/null; then
+  echo -n "婢 "
 else
   echo -n "墳 "
-  amixer sget Master | awk -F"[][]" '/Front Left:/ {print $2}'
+  amixer sget Master | awk -F"[][]" '/Front Left:/ {printf "%s",$2}'
 fi
