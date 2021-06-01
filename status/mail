@@ -1,0 +1,11 @@
+num_unread=$(find ~/.mail/*/INBOX/new -type f | wc -l)
+
+if ps aux | grep "mailsync" | grep -v "grep" >/dev/null; then
+  echo -n "ﮠ $num_unread"
+else
+  echo -n "ﮡ $num_unread"
+fi
+
+
+
+
