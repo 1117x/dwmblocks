@@ -6,7 +6,7 @@ static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 
   {" ",         WIDGET_PATH "volume",          60,   1},
-  {"",         WIDGET_PATH "cmus_status",       60,   2},
+  /* {"",         WIDGET_PATH "cmus_status",       60,   2}, */
   {"",         WIDGET_PATH "mail",              60,   3},
   {"",         WIDGET_PATH "battery",           10,   0},
   /* {"",         WIDGET_PATH "bandwidth",       1,    0}, */
