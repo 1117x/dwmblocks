@@ -7,7 +7,7 @@ static const Block blocks[] = {
 
   {" ",         WIDGET_PATH "volume",          60,   1},
   {"",         "/home/frederik/.zsh/scripts/dmenu-bluetooth --status",
-                                                60,   1},
+                                                60,   4},
   /* {"",         WIDGET_PATH "cmus_status",       60,   2}, */
   {"",         WIDGET_PATH "mail",              60,   3},
   {"",         WIDGET_PATH "battery",           10,   0},
